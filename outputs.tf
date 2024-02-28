@@ -4,6 +4,6 @@ output "ip_address" {
 }
 
 output "tags" {
-  value = aws_instance.instance.tags
+  value       = aws_instance.instance.tags
   description = "The Names of the EC2 instance"
 }

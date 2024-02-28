@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "security_groups" {
   type        = list(string)
-  description = " List of security groups to associate with."
+  description = "List of security groups to associate with."
 }
 
 variable "region" {
@@ -31,4 +31,9 @@ variable "user_data" {
 variable "name" {
   type        = string
   description = "The name to assign to the resource."
+}
+
+variable "vpc_security_group_ids" {
+  type        = list(string)
+  description = "List of vpc to associate with"
 }
