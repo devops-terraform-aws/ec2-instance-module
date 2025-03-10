@@ -16,5 +16,9 @@ output "instance_id" {
 output "password_data" {
   value       = aws_instance.instance.password_data
   description = "The password data of the EC2 instance"
-  
+}
+
+output "region" {
+  value       = var.region
+  description = "The region of the EC2 instance"
 }

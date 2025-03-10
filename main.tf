@@ -7,6 +7,7 @@ resource "aws_instance" "instance" {
   user_data                   = var.user_data
   associate_public_ip_address = true
   get_password_data           = var.get_password_data
+
   tags = {
     Name = var.name
   }
