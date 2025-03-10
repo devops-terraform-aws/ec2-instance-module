@@ -26,6 +26,7 @@ variable "region" {
 variable "user_data" {
   type        = string
   description = "User data to provide when launching the instance. Do not pass gzip-compressed data via this argument."
+  default     = null
 }
 
 variable "name" {
@@ -36,4 +37,10 @@ variable "name" {
 variable "vpc_security_group_ids" {
   type        = list(string)
   description = "List of vpc to associate with"
+}
+
+variable "get_password_data" {
+  type        = bool
+  description = "If true, wait for password data to be available and retrieve it."
+  default     = false
 }

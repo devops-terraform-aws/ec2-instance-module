@@ -7,3 +7,8 @@ output "tags" {
   value       = aws_instance.instance.tags
   description = "The Names of the EC2 instance"
 }
+
+output "instance_id" {
+  value       = aws_instance.instance.id
+  description = "The ID of the EC2 instance"
+}
