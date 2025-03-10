@@ -37,6 +37,7 @@ variable "name" {
 variable "vpc_security_group_ids" {
   type        = list(string)
   description = "List of vpc to associate with"
+  default     = null
 }
 
 variable "get_password_data" {
