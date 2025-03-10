@@ -12,3 +12,9 @@ output "instance_id" {
   value       = aws_instance.instance.id
   description = "The ID of the EC2 instance"
 }
+
+output "password_data" {
+  value       = aws_instance.instance.password_data
+  description = "The password data of the EC2 instance"
+  
+}
