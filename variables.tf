@@ -16,6 +16,7 @@ variable "instance_type" {
 variable "security_groups" {
   type        = list(string)
   description = "List of security groups to associate with."
+  default     = null
 }
 
 variable "region" {
@@ -29,9 +30,10 @@ variable "user_data" {
   default     = null
 }
 
-variable "name" {
-  type        = string
+variable "tags" {
+  type        = map(string)
   description = "The name to assign to the resource."
+  default     = {}
 }
 
 variable "vpc_security_group_ids" {
@@ -44,4 +46,10 @@ variable "get_password_data" {
   type        = bool
   description = "If true, wait for password data to be available and retrieve it."
   default     = false
+}
+
+variable "subnet_id" {
+  type        = string
+  description = "The VPC Subnet ID to launch in."
+  default     = null
 }
