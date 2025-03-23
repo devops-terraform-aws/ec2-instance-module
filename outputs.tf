@@ -1,6 +1,11 @@
-output "ip_address" {
+output "public_ip_address" {
   value       = aws_instance.instance.public_ip
   description = "The public IP address from the EC2 instance."
+}
+
+output "private_ip_address" {
+  value       = aws_instance.instance.private_ip
+  description = "The private IP address from the EC2 instance."
 }
 
 output "tags" {
